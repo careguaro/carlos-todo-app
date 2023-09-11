@@ -1,0 +1,11 @@
+.custom-li:hover .delete-button {
+  display: inline-block;
+}
+
+.delete-button {
+  display: none;
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+}

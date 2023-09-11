@@ -1,0 +1,8 @@
+<div class="card custom-li">
+  <div class="card-body">
+    <input type="checkbox" [(ngModel)]="todo.completed" class="form-check-input" (click)="onToggleCompleted()"/>
+    <span class="form-check-label ms-2">{{ todo.text }}</span>
+    <button (click)="onDelete()" class="btn btn-danger btn-sm float-end delete-button">Delete</button>
+  </div>
+</div>
+

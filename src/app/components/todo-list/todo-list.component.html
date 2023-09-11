@@ -1,0 +1,23 @@
+<div class="container">
+  <div class="mb-3 d-flex justify-content-center">
+    <h1>Todo List</h1>
+  </div>
+  <div class="mb-3">
+    <app-todo-filter [todos]="todos" (sendFilter)="filterTodos($event)"></app-todo-filter>
+  </div>
+  <div>
+    <ul>
+      <li class="mb-3">
+        <app-todo-add (add)="addTodo($event)"></app-todo-add>
+      </li>
+      <li *ngFor="let todo of filteredTodos" class="mb-3">
+        <app-todo-item
+          [todo]="todo"
+          (delete)="deleteTodo(todo.id)"
+          (toggleCompleted)="toggleCompleteTodo($event)"
+          [class.completed-item]="todo.completed && filter === 'all'"
+        ></app-todo-item>
+      </li>
+    </ul>
+  </div>
+</div>

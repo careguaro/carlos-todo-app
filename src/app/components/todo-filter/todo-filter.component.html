@@ -1,0 +1,21 @@
+<h2>Filters</h2>
+<div class="row">
+  <div class="btn-group col-md-3" role="group" aria-label="Basic example">
+    <button type="button" class="btn btn-secondary" (click)="filterTodos('all')" [class.active]="filter === 'all'">
+      All
+    </button>
+    <button type="button" class="btn btn-secondary" (click)="filterTodos('completed')"
+      [class.active]="filter === 'completed'">
+      Completed
+    </button>
+    <button type="button" class="btn btn-secondary" (click)="filterTodos('pending')"
+      [class.active]="filter === 'pending'">
+      Pending
+    </button>
+  </div>
+  <div class="col-md-3 d-flex align-items-center">
+    <h3>
+      {{ itemsCount }} items ({{ pendingCount }} pending)
+    </h3>
+  </div>
+</div>
